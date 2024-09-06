@@ -17,7 +17,7 @@
         if ([value integerValue] % 2 != 0) {
             number++;
         }
-    };
+    }
     
     return number;
 }
