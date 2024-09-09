@@ -7,12 +7,12 @@
         return @[];
     }
     
-    NSString *numberStr = [[number stringValue] stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    NSString *stringFromNumber = [[number stringValue] stringByReplacingOccurrencesOfString:@"-" withString:@""];
     
-    NSMutableArray *reversedArray = [NSMutableArray arrayWithCapacity:numberStr.length];
+    NSMutableArray *reversedArray = [NSMutableArray arrayWithCapacity:stringFromNumber.length];
     
-    for (NSInteger index = numberStr.length - 1; index >= 0; index--) {
-        NSString *charItem = [NSString stringWithFormat:@"%C", [numberStr characterAtIndex:index]];
+    for (NSInteger index = stringFromNumber.length - 1; index >= 0; index--) {
+        NSString *charItem = [NSString stringWithFormat:@"%C", [stringFromNumber characterAtIndex:index]];
         [reversedArray addObject:charItem];
     }
     
